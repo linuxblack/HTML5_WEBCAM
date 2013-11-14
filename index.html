@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Stream</title>
+</head>
+<body>
+	<header>
+		<figure>
+			<img src="img/video.png" alt="video" id="video"/>
+		</figure> 
+		<h1>Ejemplo Streaming Video/Audio! :)</h1>
+	</header>
+	
+	<section id="contenedor">
+		<article>
+			<figure>
+				<img src="img/FLECHA.png" alt="flecha" id="flecha">
+			</figure>
+
+			<section id="texto">
+				<article>
+					<video controls autoplay loop>
+						<source src="video/Happy_Feet_Two_Trailer.mp4" type="video/mp4" />
+					    <source src="video/Happy_Feet_Two_Trailer.webm" type="video/webm" />
+					</video>
+					<p id="gum">getUserMeda no tiene soporte por el momento.</p>
+				</article>
+			</section>
+
+		</article>
+	</section>
+	
+	<footer>
+		<p>Esteban Rojas, Estudiante 8° Semestre Ing. Informatica</p>
+	</footer>
+	
+	<link rel="stylesheet" href="ccs/normalize.css" />
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="css/estilos.css" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/funciones.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var article = video.parentNode,
+    	gum = document.getElementById('gum');
+
+		if (navigator.getUserMedia) {
+		  article.removeChild(gum);
+		  article.className = 'supported';
+		}
+	</script>
+</body>
+</html>
